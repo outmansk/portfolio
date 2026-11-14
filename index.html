@@ -34,9 +34,10 @@
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Schibsted+Grotesk:wght@500;600&amp;display=swap">
 <link rel="preload" as="image" href="assets/img/outman-skikin.jpg">
 <link rel="stylesheet" href="css/style.css">
+<script>document.documentElement.classList.add("js")</script>
 
 <!-- Données structurées schema.org -->
 <script type="application/ld+json">
@@ -77,174 +78,204 @@
 <body>
 <a class="skip-link" href="#main" data-i18n="skip">Aller au contenu</a>
 
-<header class="hdr">
-  <a class="logo" href="#top">Outman Skikin<span class="accent">.</span></a>
-  <nav class="nav" aria-label="Navigation">
-    <a class="nav-link ul hide-m" href="#parcours" data-i18n="nav.exp">Parcours</a>
-    <a class="nav-link ul hide-m" href="#projets" data-i18n="nav.projects">Projets</a>
-    <a class="nav-link ul hide-m" href="#competences" data-i18n="nav.skills">Compétences</a>
-    <a class="nav-link ul hide-m" href="#contact" data-i18n="nav.contact">Contact</a>
-    <a class="nav-cta show-m" href="#contact" data-i18n="nav.contact">Contact</a>
-    <div class="lang" role="group" aria-label="Langue / Language">
-      <button type="button" data-lang="fr" aria-pressed="true" lang="fr">FR</button>
-      <button type="button" data-lang="en" aria-pressed="false" lang="en">EN</button>
-    </div>
-  </nav>
+<header class="hdr" id="hdr">
+  <div class="wrap hdr-in">
+    <a class="logo disp" href="#top">Outman Skikin<span class="acc">.</span></a>
+    <nav class="nav" aria-label="Navigation principale" data-i18n-aria="navLabel">
+      <a class="nav-a nav-x" href="#parcours"><span class="ul" data-i18n="nav1">Parcours</span></a>
+      <a class="nav-a nav-x" href="#projets"><span class="ul" data-i18n="nav2">Projets</span></a>
+      <a class="nav-a nav-x" href="#competences"><span class="ul" data-i18n="nav3">Compétences</span></a>
+      <a class="nav-a" href="#contact"><span class="ul" data-i18n="nav4">Contact</span></a>
+      <div class="lang" id="lang" data-lang="fr" role="group" aria-label="Langue du site" data-i18n-aria="langLabel">
+        <span class="lang-pill" aria-hidden="true"></span>
+        <button type="button" data-lang="fr" aria-pressed="true" lang="fr">FR</button>
+        <button type="button" data-lang="en" aria-pressed="false" lang="en">EN</button>
+      </div>
+    </nav>
+  </div>
 </header>
 
 <main id="main">
 
-<section id="top" class="hero">
-  <div class="hero-text">
-    <span class="status"><span class="status-dot" aria-hidden="true"></span><span data-i18n="status">Disponible · Stage PFE dès février 2027</span></span>
-    <h1 class="h1"><span data-i18n="title1">Je conçois des solutions logicielles</span> <span class="accent" data-i18n="title2">utiles, quel que soit le secteur.</span></h1>
-    <p class="lead" data-i18n="sub">Développement full-stack, machine learning, deep learning et LLM, automatisation de workflows et systèmes d’information. Curieux et adaptable, je souhaite rejoindre une équipe en ESN, dans le conseil, l’industrie, l’automobile ou la finance. Basé à Marrakech, mobile.</p>
-    <div class="btns">
-      <a class="btn btn-dark" href="#contact"><span data-i18n="cta1">Me contacter</span>
-        <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
-      <a class="btn btn-outline" href="#projets" data-i18n="cta2">Voir les projets</a>
-      <a class="btn btn-outline" href="CV_Outman_Skikin.pdf" download="CV_Outman_Skikin.pdf" type="application/pdf"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg><span data-i18n="cvLabel">Télécharger mon CV</span></a>
-    </div>
-  </div>
-  <figure class="hero-photo">
-    <img src="assets/img/outman-skikin.jpg" width="960" height="1280" alt="Photo d’Outman Skikin, élève ingénieur en informatique et IA" data-i18n-alt="photoAlt" fetchpriority="high">
-    <figcaption data-i18n="kicker">Élève ingénieur en informatique et systèmes d’information — Université Privée de Marrakech</figcaption>
-  </figure>
-</section>
-
-<section class="band" aria-label="Ouvert à :" data-i18n-aria="openTo">
-  <div class="band-inner">
-    <span class="band-label" data-i18n="openTo">Ouvert à :</span>
-    <div id="sectors" style="display:contents">
-      <span class="band-item">ESN &amp; conseil</span><span class="band-item">Automobile</span><span class="band-item">Industrie</span><span class="band-item">Banque &amp; finance</span><span class="band-item">Télécoms</span><span class="band-item">E-commerce</span><span class="band-item">Santé</span>
-    </div>
-  </div>
-</section>
-
-<section class="facts" aria-label="Chiffres clés">
-  <div id="facts" style="display:contents">
-    <div class="fact"><span class="fact-v">5</span><span class="fact-l">expériences en entreprise</span></div>
-    <div class="fact"><span class="fact-v">3</span><span class="fact-l">langues : arabe, français C1, anglais B2</span></div>
-    <div class="fact"><span class="fact-v">2027</span><span class="fact-l">diplôme d’ingénieur</span></div>
-    <div class="fact"><span class="fact-v">5</span><span class="fact-l">projets présentés</span></div>
-  </div>
-</section>
-
-<section class="focus-sec">
-  <div class="focus-head">
-    <h2 class="h2" data-i18n="focusTitle">Un profil polyvalent, du code au processus métier.</h2>
-  </div>
-  <div class="focus-grid" id="focus">
-    <div class="focus-item"><h3>Applications web</h3><p>Next.js, React et API REST Express, bases MySQL/Prisma, authentification JWT, gestion des rôles et tableaux de bord temps réel.</p></div>
-    <div class="focus-item"><h3>Machine learning &amp; IA</h3><p>Entraînement de modèles de machine learning et de deep learning (vision par ordinateur), entraînement et intégration de LLM pour classifier, rédiger et personnaliser.</p></div>
-    <div class="focus-item"><h3>Automatisation</h3><p>Automatisation de workflows et agents IA pour la prospection, les newsletters, les RH et la finance : de la collecte de données jusqu’à l’action.</p></div>
-  </div>
-</section>
-
-<section id="parcours" class="sec">
-  <h2 class="h2 h2-exp" data-i18n="expTitle">Des expériences variées : développement, IA, automatisation et SI.</h2>
-  <div class="exp-list" id="exp-list">
-    <article class="exp"><div class="exp-meta"><span class="exp-period">Juil. – Août 2026</span><span class="exp-place">Marrakech · Sur site</span></div><div class="exp-body"><h3>Développeur web full-stack <span class="accent">— Norsys Afrique</span></h3><ul><li>Projet ABEED : application de gestion des bénéficiaires avec Next.js/React, API REST Express.js et MySQL/Prisma.</li><li>Authentification JWT, hachage bcryptjs et gestion des rôles utilisateur / administrateur.</li><li>Formulaire en six étapes, tableau de bord temps réel avec SSE et tests fonctionnels.</li><li>Travail en équipe sur GitLab : gestion des versions, branches et merge requests.</li></ul><p class="exp-tag">Stage PFA · Next.js, React, Express, MySQL, Prisma, GitLab</p></div></article>
-    <article class="exp"><div class="exp-meta"><span class="exp-period">Janv. – Juin 2026</span><span class="exp-place">Freelance · À distance</span></div><div class="exp-body"><h3>Développeur en automatisation <span class="accent">— NoCode IA Toulouse</span></h3><ul><li>Système de prospection automatisée : collecte de données, workflows automatisés et personnalisation avec Google Gemini.</li><li>Application web de suivi des performances.</li></ul><p class="exp-tag">Workflows, agents IA, Gemini</p></div></article>
-    <article class="exp"><div class="exp-meta"><span class="exp-period">Mars – Sept. 2025</span><span class="exp-place">PFE de licence</span></div><div class="exp-body"><h3>Développement &amp; automatisation <span class="accent">— iaweb.dev</span></h3><ul><li>Workflows d’automatisation et agents IA pour des besoins B2B.</li><li>Traitement des demandes d’absence RH avec génération automatique de PDF.</li><li>Classification d’e-mails et rapprochement de données bancaires.</li><li>Rapports d’aide à l’analyse des risques post-opératoires (OpenAI, Airtable).</li><li>Traitement de dossiers de sinistres et scoring de suspicion de fraude.</li></ul><p class="exp-tag">Agents IA, GPT-4o, JavaScript, Python</p></div></article>
-    <article class="exp"><div class="exp-meta"><span class="exp-period">Sept. – Oct. 2024</span><span class="exp-place">Lesquin, France · Sur site</span></div><div class="exp-body"><h3>Stagiaire automatisation <span class="accent">— Havet Digital</span></h3><ul><li>Newsletter automatisée de bout en bout : collecte des leads, envoi et relance.</li><li>Qualification et segmentation automatisées des contacts.</li></ul><p class="exp-tag">Lead generation, emailing, automatisation</p></div></article>
-    <article class="exp"><div class="exp-meta"><span class="exp-period">Mai – Juil. 2023</span><span class="exp-place">Stage</span></div><div class="exp-body"><h3>Stagiaire informatique <span class="accent">— Groupe Alliances</span></h3><ul><li>Rédaction de requêtes SQL et extraction de données.</li><li>Participation à la maintenance de systèmes existants.</li></ul><p class="exp-tag">SQL, Merise</p></div></article>
-  </div>
-</section>
-
-<section id="projets" class="sec">
-  <h2 class="h2" data-i18n="projTitle">Une sélection de projets.</h2>
-  <div class="carousel" role="region" aria-roledescription="carousel" aria-label="Une sélection de projets." data-i18n-aria="projTitle">
-    <div class="carousel-bar">
-      <div class="tabs" id="tabs" role="tablist" aria-label="Une sélection de projets." data-i18n-aria="projTitle">
-        <button type="button" class="tab" role="tab" id="tab-0" aria-controls="slide" aria-selected="true" data-i="0">HD Automatisation</button>
-        <button type="button" class="tab" role="tab" id="tab-1" aria-controls="slide" aria-selected="false" tabindex="-1" data-i="1">Reconnaissance d’émotions</button>
-        <button type="button" class="tab" role="tab" id="tab-2" aria-controls="slide" aria-selected="false" tabindex="-1" data-i="2">UPM Events</button>
-        <button type="button" class="tab" role="tab" id="tab-3" aria-controls="slide" aria-selected="false" tabindex="-1" data-i="3">Live in Marrakech</button>
-        <button type="button" class="tab" role="tab" id="tab-4" aria-controls="slide" aria-selected="false" tabindex="-1" data-i="4">Josef Marrakech</button>
-      </div>
-      <div class="carousel-nav">
-        <span class="counter" id="counter">01 / 05</span>
-        <button type="button" class="arrow arrow-prev" id="prev" aria-label="Projet précédent" data-i18n-aria="prevLabel">
-          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 5l-7 7 7 7"/></svg></button>
-        <button type="button" class="arrow arrow-next" id="next" aria-label="Projet suivant" data-i18n-aria="nextLabel">
-          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></button>
+<section class="wrap hero" id="top" aria-labelledby="h-hero">
+  <div class="g12 hero-g">
+    <div class="hero-txt">
+      <p class="avail fu"><span class="dot" aria-hidden="true"></span><span data-i18n="avail">Disponible · Stage PFE dès février 2027</span></p>
+      <h1 class="h1 disp" id="h-hero">
+        <span class="ln"><span class="ln-in">Je conçois des</span></span>
+        <span class="ln"><span class="ln-in">solutions logicielles</span></span>
+        <span class="ln"><span class="ln-in">utiles, <em class="acc">quel que soit</em></span></span>
+        <span class="ln"><span class="ln-in"><em class="acc">le secteur.</em></span></span>
+      </h1>
+      <p class="sub fu fu-1" data-i18n="sub">Développement full-stack, machine learning, deep learning et LLM, automatisation de workflows et systèmes d’information. Curieux et adaptable, je souhaite rejoindre une équipe en ESN, dans le conseil, l’industrie, l’automobile ou la finance. Basé à Marrakech, mobile.</p>
+      <div class="btns fu fu-2">
+        <a class="btn btn-p" href="#contact"><span data-i18n="b1">Me contacter</span><svg class="ar" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a class="btn btn-s" href="#projets" data-i18n="b2">Voir les projets</a>
+        <a class="btn btn-g" href="CV_Outman_Skikin.pdf" download="CV_Outman_Skikin.pdf" type="application/pdf"><span data-i18n="b3">Télécharger mon CV</span><svg class="ar ar-d" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 3v10M4 9l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </div>
     </div>
-    <article class="slide" id="slide" role="tabpanel" aria-labelledby="tab-0" aria-live="polite">
-      <div class="cover" id="cover">
-        <span class="cover-kind" id="cover-kind">Plateforme IA</span>
-        <span class="cover-title" id="cover-title" aria-hidden="true">HD Automatisation</span>
-        <span class="cover-count" id="cover-count" aria-hidden="true">01 / 05</span>
+    <figure class="hero-fig">
+      <div class="ph">
+        <img src="assets/img/outman-skikin.jpg" width="960" height="1280" fetchpriority="high" alt="Portrait d’Outman Skikin à Marrakech" data-i18n-alt="photoAlt">
       </div>
-      <div class="slide-body">
-        <h3 id="slide-title">HD Automatisation</h3>
-        <p id="slide-text">Plateforme d’automatisation IA et no-code : assistant conversationnel et suite d’outils HD Leads, HD Newsletter, HD Ads, HD Images et HD WorkFlow.</p>
-        <div class="tags" id="slide-tags"><span class="tag">Agents IA</span><span class="tag">Workflows</span><span class="tag">Gemini</span><span class="tag">No-code</span></div>
-        <a class="slide-link" id="slide-link" href="https://hdautomatisation.fr/" target="_blank" rel="noopener"><span id="slide-link-label">Voir le site</span>
-          <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
-      </div>
-    </article>
-    <div class="dots" id="dots" aria-hidden="true"><span class="on"></span><span></span><span></span><span></span><span></span></div>
+      <figcaption class="cap" data-i18n="caption">Élève ingénieur en informatique et systèmes d’information — Université Privée de Marrakech</figcaption>
+    </figure>
   </div>
 </section>
 
-<section id="competences" class="sec">
-  <h2 class="h2" data-i18n="stackTitle">Compétences.</h2>
-  <div class="marquee" aria-label="Compétences." data-i18n-aria="stackTitle">
-    <div class="mq-row"><div class="mq-track" id="mq1">
-      <span class="chip chip-light"><span class="chip-dot" aria-hidden="true"></span>React</span><span class="chip chip-light"><span class="chip-dot" aria-hidden="true"></span>Next.js</span><span class="chip chip-light"><span class="chip-dot" aria-hidden="true"></span>Vue 3</span><span class="chip chip-light"><span class="chip-dot" aria-hidden="true"></span>TypeScript</span><span class="chip chip-light"><span class="chip-dot" aria-hidden="true"></span>Node.js</span><span class="chip chip-light"><span class="chip-dot" aria-hidden="true"></span>Express.js</span><span class="chip chip-light"><span class="chip-dot" aria-hidden="true"></span>Java</span><span class="chip chip-light"><span class="chip-dot" aria-hidden="true"></span>Spring Boot</span><span class="chip chip-light"><span class="chip-dot" aria-hidden="true"></span>Tailwind CSS</span><span class="chip chip-light"><span class="chip-dot" aria-hidden="true"></span>PostgreSQL</span><span class="chip chip-light"><span class="chip-dot" aria-hidden="true"></span>MySQL</span><span class="chip chip-light"><span class="chip-dot" aria-hidden="true"></span>Prisma</span><span class="chip chip-light"><span class="chip-dot" aria-hidden="true"></span>Firebase</span><span class="chip chip-light"><span class="chip-dot" aria-hidden="true"></span>Docker</span><span class="chip chip-light"><span class="chip-dot" aria-hidden="true"></span>Git</span><span class="chip chip-light"><span class="chip-dot" aria-hidden="true"></span>GitLab</span><span class="chip chip-light"><span class="chip-dot" aria-hidden="true"></span>Linux</span>
-    </div></div>
-    <div class="mq-row"><div class="mq-track mq-rev" id="mq2">
-      <span class="chip chip-dark">Machine Learning</span><span class="chip chip-dark">Deep Learning</span><span class="chip chip-dark">Computer Vision</span><span class="chip chip-dark">TensorFlow</span><span class="chip chip-dark">OpenCV</span><span class="chip chip-dark">Python</span><span class="chip chip-dark">Création d’agents IA</span><span class="chip chip-dark">n8n</span><span class="chip chip-dark">Make</span><span class="chip chip-dark">Zapier</span><span class="chip chip-dark">Automatisation de workflows</span><span class="chip chip-dark">Claude Code</span><span class="chip chip-dark">Codex</span><span class="chip chip-dark">MCP</span>
-    </div></div>
+<section class="wrap open" aria-label="Ouvert à" data-i18n-aria="openL">
+  <div class="open-in">
+    <span class="open-l" data-i18n="openL">Ouvert à</span>
+    <ul class="open-list" id="open-list">
+      <li>ESN &amp; conseil</li><li>Automobile</li><li>Industrie</li><li>Banque &amp; finance</li><li>Télécoms</li><li>E-commerce</li><li>Santé</li>
+    </ul>
   </div>
-  <div class="stack-grid" id="stack">
-    <div class="stack-item"><h3>Développement</h3><p>React, Next.js, Vue 3, JavaScript, TypeScript, Tailwind CSS, Node.js, Express.js, API REST, JWT, Python, Java, Spring Boot</p></div>
-    <div class="stack-item"><h3>IA &amp; data</h3><p>Machine Learning, Deep Learning, Computer Vision, TensorFlow/Keras, scikit-learn, OpenCV, NumPy, pandas</p></div>
-    <div class="stack-item"><h3>Agents IA &amp; automatisation</h3><p>Création d’agents IA, automatisation de workflows, n8n, Make, Zapier, webhooks, intégrations API, MCP, Claude Code, Codex</p></div>
-    <div class="stack-item"><h3>Données &amp; outils</h3><p>MySQL, PostgreSQL, Prisma, Firebase, SQL, Git, GitLab, Docker, Linux</p></div>
+</section>
+
+<section class="wrap stats-sec rv" aria-label="Chiffres clés" data-i18n-aria="statsLabel">
+  <div class="stats" id="stats">
+    <div class="stat"><p class="stat-v disp tnum" data-count="5">5</p><p class="stat-l">expériences en entreprise</p></div>
+    <div class="stat"><p class="stat-v disp tnum" data-count="3">3</p><p class="stat-l">langues</p><p class="stat-s">arabe, français C1, anglais B2</p></div>
+    <div class="stat"><p class="stat-v disp tnum" data-count="2027">2027</p><p class="stat-l">diplôme d’ingénieur</p></div>
+    <div class="stat"><p class="stat-v disp tnum" data-count="5">5</p><p class="stat-l">projets présentés</p></div>
   </div>
-  <div class="cards">
-    <div class="card-box">
-      <span class="card-tag" data-i18n="eduTag">Formation</span>
-      <h3 data-i18n="eduSchool">Université Privée de Marrakech</h3>
-      <p data-i18n="eduText">Cycle ingénieur en informatique et systèmes d’information, parcours Intelligence artificielle (2022 – 2027, dernière année). Licence en informatique – Développement logiciel et systèmes automatisés (2021 – 2023). Baccalauréat sciences physiques (2021).</p>
+</section>
+
+<section class="wrap sec rv" id="profil" aria-labelledby="h-prof">
+  <div class="g12">
+    <div class="prof-l">
+      <p class="eyebrow"><span class="tnum">01</span><span data-i18n="e1">Profil</span></p>
+      <h2 class="h2 disp" id="h-prof" data-i18n="profT">Un profil polyvalent, du code au processus métier.</h2>
     </div>
-    <div class="card-box certs">
-      <span class="card-tag" data-i18n="certTag">Certifications, langues &amp; engagements</span>
-      <div id="certs" style="display:contents">
-        <div class="cert"><span>AI for Marketing</span><span class="cert-meta">LinkedIn · 2026</span></div>
-        <div class="cert"><span>L’essentiel de Spring Boot</span><span class="cert-meta">LinkedIn · 2026</span></div>
-        <div class="cert"><span>Arabe · Français · Anglais</span><span class="cert-meta">Natif · C1 · B2</span></div>
-        <div class="cert"><span>UPM IT Club</span><span class="cert-meta">Vice-président</span></div>
-        <div class="cert"><span>ROAD Amal</span><span class="cert-meta">Secrétaire général</span></div>
-        <div class="cert"><span>Kech Art</span><span class="cert-meta">Membre actif</span></div>
+    <div class="prof-r" id="areas">
+      <div class="area"><h3 class="area-h disp"><span class="area-n tnum">01</span>Applications web</h3><p class="area-d">Next.js, React et API REST Express, MySQL/Prisma, authentification JWT, gestion des rôles, tableaux de bord temps réel.</p></div>
+      <div class="area"><h3 class="area-h disp"><span class="area-n tnum">02</span>Machine learning &amp; IA</h3><p class="area-d">Modèles de machine learning et deep learning (vision par ordinateur), entraînement et intégration de LLM.</p></div>
+      <div class="area"><h3 class="area-h disp"><span class="area-n tnum">03</span>Automatisation</h3><p class="area-d">Workflows et agents IA pour la prospection, les newsletters, les RH et la finance.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap sec" id="parcours" aria-labelledby="h-tl">
+  <div class="g12 rv">
+    <div class="sec-head">
+      <p class="eyebrow"><span class="tnum">02</span><span data-i18n="e2">Parcours</span></p>
+      <h2 class="h2 disp" id="h-tl" data-i18n="tlT">Des expériences variées : développement, IA, automatisation et SI.</h2>
+    </div>
+  </div>
+  <div class="tl" id="tl">
+    <span class="tl-rail" aria-hidden="true"></span>
+    <span class="tl-fill" id="tl-fill" aria-hidden="true"></span>
+    <ol id="tl-list">
+      <li class="tl-item"><div class="tl-left"><p class="tl-date tnum">Juil. – Août 2026</p><p class="tl-kind">Stage PFA</p></div><div class="tl-mid" aria-hidden="true"><span class="tl-dot"></span></div><div class="tl-right"><h3 class="tl-role disp">Développeur web full-stack</h3><p class="tl-org">Norsys Afrique, Marrakech</p><p class="tl-text">Projet ABEED : gestion des bénéficiaires en Next.js/React, API Express, MySQL/Prisma ; JWT, bcryptjs, rôles ; formulaire en 6 étapes, tableau de bord temps réel (SSE) ; GitLab.</p></div></li>
+      <li class="tl-item"><div class="tl-left"><p class="tl-date tnum">Janv. – Juin 2026</p><p class="tl-kind">Freelance, à distance</p></div><div class="tl-mid" aria-hidden="true"><span class="tl-dot"></span></div><div class="tl-right"><h3 class="tl-role disp">Développeur en automatisation</h3><p class="tl-org">NoCode IA Toulouse</p><p class="tl-text">Prospection automatisée avec Google Gemini ; application de suivi des performances.</p></div></li>
+      <li class="tl-item"><div class="tl-left"><p class="tl-date tnum">Mars – Sept. 2025</p><p class="tl-kind">PFE de licence</p></div><div class="tl-mid" aria-hidden="true"><span class="tl-dot"></span></div><div class="tl-right"><h3 class="tl-role disp">Développement &amp; automatisation</h3><p class="tl-org">iaweb.dev</p><p class="tl-text">Agents IA B2B, demandes d’absence RH avec PDF automatique, classification d’e-mails, rapprochement bancaire, rapports d’analyse de risques (OpenAI, Airtable), scoring de fraude.</p></div></li>
+      <li class="tl-item"><div class="tl-left"><p class="tl-date tnum">Sept. – Oct. 2024</p><p class="tl-kind">Stage</p></div><div class="tl-mid" aria-hidden="true"><span class="tl-dot"></span></div><div class="tl-right"><h3 class="tl-role disp">Stagiaire automatisation</h3><p class="tl-org">Havet Digital, Lesquin (France)</p><p class="tl-text">Newsletter automatisée de bout en bout, qualification et segmentation des contacts.</p></div></li>
+      <li class="tl-item"><div class="tl-left"><p class="tl-date tnum">Mai – Juil. 2023</p><p class="tl-kind">Stage</p></div><div class="tl-mid" aria-hidden="true"><span class="tl-dot"></span></div><div class="tl-right"><h3 class="tl-role disp">Stagiaire informatique</h3><p class="tl-org">Groupe Alliances</p><p class="tl-text">Requêtes SQL, extraction de données, maintenance de systèmes.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="wrap sec" id="projets" aria-labelledby="h-pj">
+  <div class="pj-head rv">
+    <div>
+      <p class="eyebrow"><span class="tnum">03</span><span data-i18n="e3">Projets</span></p>
+      <h2 class="h2 disp" id="h-pj" data-i18n="pjT">Une sélection de projets.</h2>
+    </div>
+    <div class="pj-ctrl">
+      <p class="pj-count tnum" aria-live="polite"><b id="pj-cur">01</b> / 05</p>
+      <div class="pj-arrows">
+        <button class="circ" id="pj-prev" type="button" aria-label="Projet précédent" data-i18n-aria="prev"><svg class="ar ar-p" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13 8H3M7 4L3 8l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <button class="circ" id="pj-next" type="button" aria-label="Projet suivant" data-i18n-aria="next"><svg class="ar ar-n" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      </div>
+    </div>
+  </div>
+  <div class="pj" id="pj" tabindex="0" aria-roledescription="carrousel" aria-label="Une sélection de projets." data-i18n-aria="pjT">
+    <div class="pj-tabs" id="pj-tabs" role="tablist" aria-label="Une sélection de projets." data-i18n-aria="pjT">
+      <button class="pj-tab" type="button" role="tab" aria-selected="true" aria-controls="pj-stage" data-i="0"><span class="pj-tab-n tnum">01</span>HD Automatisation</button>
+      <button class="pj-tab" type="button" role="tab" aria-selected="false" aria-controls="pj-stage" data-i="1" tabindex="-1"><span class="pj-tab-n tnum">02</span>Reconnaissance d’émotions</button>
+      <button class="pj-tab" type="button" role="tab" aria-selected="false" aria-controls="pj-stage" data-i="2" tabindex="-1"><span class="pj-tab-n tnum">03</span>UPM Events</button>
+      <button class="pj-tab" type="button" role="tab" aria-selected="false" aria-controls="pj-stage" data-i="3" tabindex="-1"><span class="pj-tab-n tnum">04</span>Live in Marrakech</button>
+      <button class="pj-tab" type="button" role="tab" aria-selected="false" aria-controls="pj-stage" data-i="4" tabindex="-1"><span class="pj-tab-n tnum">05</span>Josef Marrakech</button>
+    </div>
+    <div class="pj-track" aria-hidden="true"><span class="pj-bar" id="pj-bar"></span></div>
+    <div class="pj-stage" id="pj-stage" role="tabpanel">
+      <div class="pj-cover" id="pj-cover" aria-hidden="true">
+        <div class="pj-panel pj-cv is-on" data-i="0"><div class="pj-cv-top"><span class="tnum">01</span><span>Plateforme IA</span></div><div class="pj-cv-rule"></div><p class="pj-cv-name disp">HD Automatisation</p><p class="pj-cv-dom">hdautomatisation.fr</p></div>
+        <div class="pj-panel pj-cv" data-i="1"><div class="pj-cv-top"><span class="tnum">02</span><span>Deep learning</span></div><div class="pj-cv-rule"></div><p class="pj-cv-name disp">Reconnaissance d’émotions</p><p class="pj-cv-dom">7 expressions · FER-2013</p></div>
+        <div class="pj-panel pj-cv" data-i="2"><div class="pj-cv-top"><span class="tnum">03</span><span>Application web</span></div><div class="pj-cv-rule"></div><p class="pj-cv-name disp">UPM Events</p><p class="pj-cv-dom">Université Privée de Marrakech</p></div>
+        <div class="pj-panel pj-cv" data-i="3"><div class="pj-cv-top"><span class="tnum">04</span><span>Immobilier</span></div><div class="pj-cv-rule"></div><p class="pj-cv-name disp">Live in Marrakech</p><p class="pj-cv-dom">liveinmarrakech.com</p></div>
+        <div class="pj-panel pj-cv" data-i="4"><div class="pj-cv-top"><span class="tnum">05</span><span>Restauration</span></div><div class="pj-cv-rule"></div><p class="pj-cv-name disp">Josef Marrakech</p><p class="pj-cv-dom">josef.ma</p></div>
+      </div>
+      <div class="pj-desc" id="pj-desc">
+        <div class="pj-panel is-on" data-i="0"><p class="pj-cat">Plateforme IA</p><h3 class="pj-name disp">HD Automatisation</h3><p class="pj-text">Plateforme d’automatisation IA et no-code : assistant conversationnel et outils HD Leads, Newsletter, Ads, Images, WorkFlow.</p><ul class="tags"><li>Agents IA</li><li>Workflows</li><li>Gemini</li><li>No-code</li></ul><a class="lnk" href="https://hdautomatisation.fr" target="_blank" rel="noopener"><span class="ul">Voir hdautomatisation.fr</span><svg class="ar" width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+        <div class="pj-panel" data-i="1" aria-hidden="true"><p class="pj-cat">Deep learning</p><h3 class="pj-name disp">Reconnaissance d’émotions</h3><p class="pj-text">Classification de 7 expressions faciales (FER-2013), OpenCV, TensorFlow/Keras, interface Flask.</p><ul class="tags"><li>FER-2013</li><li>OpenCV</li><li>TensorFlow/Keras</li><li>Flask</li></ul></div>
+        <div class="pj-panel" data-i="2" aria-hidden="true"><p class="pj-cat">Application web</p><h3 class="pj-name disp">UPM Events</h3><p class="pj-text">Gestion d’événements universitaires, Firebase/Firestore, Google GenAI.</p><ul class="tags"><li>Firebase</li><li>Firestore</li><li>Google GenAI</li></ul></div>
+        <div class="pj-panel" data-i="3" aria-hidden="true"><p class="pj-cat">Immobilier</p><h3 class="pj-name disp">Live in Marrakech</h3><p class="pj-text">Plateforme immobilière avec administration, filtres et carte interactive.</p><ul class="tags"><li>React</li><li>TypeScript</li></ul><a class="lnk" href="https://liveinmarrakech.com" target="_blank" rel="noopener" tabindex="-1"><span class="ul">Voir liveinmarrakech.com</span><svg class="ar" width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+        <div class="pj-panel" data-i="4" aria-hidden="true"><p class="pj-cat">Restauration</p><h3 class="pj-name disp">Josef Marrakech</h3><p class="pj-text">Site de boulangerie-pâtisserie et bistrot, carte digitale.</p><ul class="tags"><li>React</li><li>TypeScript</li><li>Tailwind</li></ul><a class="lnk" href="https://josef.ma" target="_blank" rel="noopener" tabindex="-1"><span class="ul">Voir josef.ma</span><svg class="ar" width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="contact" class="contact">
-  <div class="contact-box">
-    <h2 data-i18n="ctaTitle">Vous recrutez un stagiaire PFE ?</h2>
-    <p data-i18n="ctaText">Développement logiciel, data &amp; IA, automatisation, systèmes d’information ou conseil : je suis ouvert à tous les secteurs et disponible à partir de février 2027.</p>
-    <div class="cta-row">
-      <a class="cbtn cbtn-light cbtn-mail" href="mailto:outmanskikin@gmail.com">outmanskikin@gmail.com</a>
-      <a class="cbtn cbtn-light" href="tel:+212706406191"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>+212 706 406 191</a>
-      <a class="cbtn cbtn-ghost" href="https://wa.me/212706406191" target="_blank" rel="noopener">WhatsApp</a>
-      <a class="cbtn cbtn-ghost" href="https://www.linkedin.com/in/outman-skikin/" target="_blank" rel="noopener me">LinkedIn
-        <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
-      <a class="cbtn cbtn-ghost" href="CV_Outman_Skikin.pdf" download="CV_Outman_Skikin.pdf" type="application/pdf"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg><span data-i18n="cvLabel">Télécharger mon CV</span></a>
+<section class="sec" id="competences" aria-labelledby="h-sk">
+  <div class="wrap rv">
+    <p class="eyebrow"><span class="tnum">04</span><span data-i18n="e4">Compétences</span></p>
+    <h2 class="h2 disp" id="h-sk" data-i18n="skT">Compétences et formation.</h2>
+  </div>
+  <div class="mq-wrap" aria-hidden="true">
+    <div class="mq"><div class="mq-track" id="mq1" data-items="React|Next.js|TypeScript|Node.js|Express.js|Spring Boot|Python|TensorFlow|scikit-learn|OpenCV|pandas"></div></div>
+    <div class="mq mq-rev"><div class="mq-track" id="mq2" data-items="n8n|Make|Zapier|MCP|Claude Code|Codex|MySQL|PostgreSQL|Prisma|Firebase|Docker|Linux"></div></div>
+  </div>
+  <div class="wrap">
+    <div class="sk-cols rv" id="sk-cols">
+      <div><h3 class="sk-h disp">Développement</h3><ul class="sk-list"><li>React</li><li>Next.js</li><li>Vue 3</li><li>JavaScript</li><li>TypeScript</li><li>Tailwind CSS</li><li>Node.js</li><li>Express.js</li><li>API REST</li><li>JWT</li><li>Python</li><li>Java</li><li>Spring Boot</li></ul></div>
+      <div><h3 class="sk-h disp">IA &amp; data</h3><ul class="sk-list"><li>Machine Learning</li><li>Deep Learning</li><li>Computer Vision</li><li>TensorFlow/Keras</li><li>scikit-learn</li><li>OpenCV</li><li>NumPy</li><li>pandas</li></ul></div>
+      <div><h3 class="sk-h disp">Agents IA &amp; automatisation</h3><ul class="sk-list"><li>n8n</li><li>Make</li><li>Zapier</li><li>Webhooks</li><li>MCP</li><li>Claude Code</li><li>Codex</li></ul></div>
+      <div><h3 class="sk-h disp">Données &amp; outils</h3><ul class="sk-list"><li>MySQL</li><li>PostgreSQL</li><li>Prisma</li><li>Firebase</li><li>SQL</li><li>Git</li><li>GitLab</li><li>Docker</li><li>Linux</li></ul></div>
+    </div>
+    <div class="cards rv">
+      <div class="card">
+        <h3 class="card-h disp" data-i18n="eduT">Formation</h3>
+        <div class="card-list" id="edu">
+          <div class="edu"><p class="edu-y tnum">2022–2027</p><div><p class="edu-a">Cycle ingénieur en informatique et systèmes d’information, parcours IA</p><p class="edu-b">Université Privée de Marrakech</p></div></div>
+          <div class="edu"><p class="edu-y tnum">2021–2023</p><div><p class="edu-a">Licence en informatique</p></div></div>
+          <div class="edu"><p class="edu-y tnum">2021</p><div><p class="edu-a">Baccalauréat sciences physiques</p></div></div>
+        </div>
+      </div>
+      <div class="card">
+        <h3 class="card-h disp" data-i18n="certT">Certifications, langues et engagements</h3>
+        <div class="card-list" id="cg">
+          <div class="cg"><p class="cg-h">Certifications</p><ul><li class="cg-li">AI for Marketing <span>— LinkedIn, 2026</span></li><li class="cg-li">L’essentiel de Spring Boot <span>— LinkedIn, 2026</span></li></ul></div>
+          <div class="cg"><p class="cg-h">Langues</p><ul><li class="cg-li">Arabe <span>— natif</span></li><li class="cg-li">Français <span>— C1</span></li><li class="cg-li">Anglais <span>— B2</span></li></ul></div>
+          <div class="cg"><p class="cg-h">Engagements</p><ul><li class="cg-li">UPM IT Club <span>— vice-président</span></li><li class="cg-li">ROAD Amal <span>— secrétaire général</span></li><li class="cg-li">Kech Art <span>— membre actif</span></li></ul></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap sec" id="contact" aria-labelledby="h-ct">
+  <div class="ct rv">
+    <p class="eyebrow"><span class="tnum">05</span><span data-i18n="e5">Contact</span></p>
+    <h2 class="ct-h disp" id="h-ct" data-i18n="ctT">Vous recrutez un stagiaire PFE ?</h2>
+    <p class="ct-p" data-i18n="ctP">Développement logiciel, data &amp; IA, automatisation, systèmes d’information ou conseil : je suis ouvert à tous les secteurs et disponible à partir de février 2027.</p>
+    <div class="ct-btns">
+      <a class="btn btn-w" href="mailto:outmanskikin@gmail.com">outmanskikin@gmail.com<svg class="ar" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a class="btn btn-o tnum" href="tel:+212706406191">+212 706 406 191</a>
+      <a class="btn btn-o" href="https://wa.me/212706406191" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="btn btn-o" href="https://www.linkedin.com/in/outman-skikin/" target="_blank" rel="noopener me">LinkedIn</a>
+      <a class="btn btn-o" href="CV_Outman_Skikin.pdf" download="CV_Outman_Skikin.pdf" type="application/pdf"><span data-i18n="b3">Télécharger mon CV</span><svg class="ar ar-d" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 3v10M4 9l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
   </div>
 </section>
 
 </main>
 
-<footer class="footer">
-  <span>© 2026 Outman Skikin</span>
-  <span data-i18n="footer">Marrakech, Maroc</span>
+<footer class="wrap">
+  <div class="ft">
+    <p data-i18n="foot">© 2026 Outman Skikin · Marrakech, Maroc</p>
+    <a href="#top"><span class="ul" data-i18n="top">Haut de page</span></a>
+  </div>
 </footer>
 
 <script src="js/main.js" defer></script>
