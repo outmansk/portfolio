@@ -308,12 +308,19 @@
     showSlide(0);
   }
 
-  /* ---------- Bandeaux de compétences (liste doublée pour une boucle continue) ---------- */
+  /* ---------- Bandeaux de logos (liste doublée pour une boucle continue) ----------
+     data-items = "fichier:Nom|…", logos dans assets/logos/<fichier>.svg (Simple Icons, CC0). */
   function initMarquee() {
     ['#mq1', '#mq2'].forEach(function (id) {
       var el = $(id), items = el.getAttribute('data-items').split('|');
-      var html = items.map(function (s) { return '<span class="mq-it disp">' + esc(s) + '</span>'; }).join('');
-      el.innerHTML = html + html;
+      function tiles(cls) {
+        return items.map(function (it) {
+          var k = it.indexOf(':'), file = it.slice(0, k), name = it.slice(k + 1);
+          return '<div class="' + cls + '"><img src="assets/logos/' + esc(file) + '.svg" width="40" height="40" alt="" decoding="async"><span>' +
+            esc(name) + '</span></div>';
+        }).join('');
+      }
+      el.innerHTML = tiles('lg') + tiles('lg lg-dup');
     });
   }
 

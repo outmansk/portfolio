@@ -270,7 +270,7 @@ a:hover .ul::after, a:focus-visible .ul::after { transform: scaleX(1); }
 .pj-cv[data-i="4"] { color: #55301F; } .pj-cv[data-i="4"] .pj-cv-dom { color: #77513F; }
 
 /* ---------- Compétences ---------- */
-.mq-wrap { display: flex; flex-direction: column; gap: 6px; margin-top: 56px; padding: 22px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.mq-wrap { display: flex; flex-direction: column; gap: 12px; margin-top: 56px; padding: 8px 0; }
 .mq {
   overflow: hidden;
   -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
@@ -280,9 +280,16 @@ a:hover .ul::after, a:focus-visible .ul::after { transform: scaleX(1); }
 .mq-rev .mq-track { animation-duration: 55s; animation-direction: reverse; }
 .mq:hover .mq-track { animation-play-state: paused; }
 @keyframes mq { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-.mq-it { display: inline-flex; align-items: center; font-size: 44px; line-height: 1.25; white-space: nowrap; color: var(--ink); }
-.mq-it::after { content: "/"; padding: 0 28px; color: #C9C3B9; font-weight: 500; }
-.mq-rev .mq-it { color: var(--ink2); }
+/* tuiles logo (marge à droite plutôt que gap : les deux moitiés restent identiques pour la boucle) */
+.lg {
+  flex: none; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px;
+  width: 132px; height: 124px; margin-right: 12px; padding: 0 10px;
+  border: 1px solid var(--line); border-radius: 20px; background: var(--surf);
+  transition: border-color 300ms var(--ease), transform 300ms var(--ease);
+}
+.lg:hover { border-color: #D6D1C8; transform: translateY(-2px); }
+.lg img { display: block; width: 40px; height: 40px; object-fit: contain; }
+.lg span { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 13px; font-weight: 500; color: var(--ink2); }
 .sk-cols { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; margin-top: 64px; }
 .sk-h { padding-top: 16px; border-top: 1px solid var(--ink); font-size: 17px; line-height: 1.3; letter-spacing: -0.02em; }
 .sk-list { margin-top: 14px; font-size: 15px; line-height: 1.95; color: var(--ink2); }
@@ -376,9 +383,10 @@ a:hover .ul::after, a:focus-visible .ul::after { transform: scaleX(1); }
   .pj-cv { padding: 24px; }
   .pj-desc { width: 100%; margin-top: 28px; }
   .pj-name { font-size: 26px; }
-  .mq-wrap { margin-top: 40px; padding: 16px 0; }
-  .mq-it { font-size: 28px; }
-  .mq-it::after { padding: 0 18px; }
+  .mq-wrap { gap: 10px; margin-top: 40px; padding: 4px 0; }
+  .lg { width: 104px; height: 100px; gap: 10px; margin-right: 10px; border-radius: 18px; }
+  .lg img { width: 32px; height: 32px; }
+  .lg span { font-size: 12px; }
   .sk-cols { grid-template-columns: minmax(0, 1fr); row-gap: 32px; margin-top: 48px; }
   .cards { grid-template-columns: minmax(0, 1fr); gap: 16px; margin-top: 48px; }
   .card { padding: 28px 24px; border-radius: 24px; }
@@ -394,6 +402,9 @@ a:hover .ul::after, a:focus-visible .ul::after { transform: scaleX(1); }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .js .rv { opacity: 1; transform: none; }
+  .mq { -webkit-mask-image: none; mask-image: none; }
+  .mq-track { width: auto; flex-wrap: wrap; justify-content: center; row-gap: 12px; }
+  .lg-dup { display: none; }
   .tl-fill { transform: scaleY(1) !important; }
   .tl-dot::after { transform: scale(1); }
 }
